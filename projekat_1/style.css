@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  background-color: #0e2517;
+}
 .nav {
-  background-color: rgb(75, 31, 71);
+  background-color: rgb(53, 23, 50);
   height: fit-content;
   display: flex;
   justify-content: space-between;
@@ -24,7 +26,6 @@
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #1c4d2f;
-  margin-right: 10px;
 }
 .right-content a:hover {
   color: #fffefe;
@@ -33,4 +34,7 @@
 .logo {
   color: #fffefe;
   text-decoration: none;
+}
+.logo:hover {
+  text-shadow: 0 0 10px #fff; /* Svetlucanje belom bojom */
 }

@@ -13,7 +13,7 @@
       </div>
       <div class="right-content">
         <a class="Login" href="login.php">Log in</a>
-        <a class="Register" href="signup.php">Register</a>
+        <a class="Register" href="register.php">Register</a>
       </div>
     </nav>
 </body>
