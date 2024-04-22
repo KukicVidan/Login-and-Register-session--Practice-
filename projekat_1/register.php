@@ -10,21 +10,21 @@
 <body>
   <div class="wrapper">
     <h2>Registration</h2>
-    <form action="#">
+    <form action="process_form.php" method="post">
       <div class="input-box">
-        <input type="text" placeholder="Enter your name" required>
+        <input name="username" type="text" placeholder="Create username" required>
       </div>
       <div class="input-box">
-        <input type="text" placeholder="Enter your email" required>
+        <input name="email" type="text" placeholder="Enter your email" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Create password" required>
+        <input name="password" type="password" placeholder="Create password" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Confirm password" required>
+        <input name="password2" type="password" placeholder="Confirm password" required>
       </div>
       <div class="policy">
-        <input type="checkbox">
+        <input type="checkbox" required>
         <h3>I accept all terms & condition</h3>
       </div>
       <div class="input-box button">
