@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: rgb(75, 31, 71);
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.right-content {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.right-content a {
+  color: #dad9d9;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #1c4d2f;
+  margin-right: 10px;
+}
+.right-content a:hover {
+  color: #fffefe;
+  background-color: #13331f;
+}
+.logo {
+  color: #fffefe;
+  text-decoration: none;
+}
