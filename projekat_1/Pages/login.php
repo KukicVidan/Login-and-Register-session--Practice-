@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Login </title> 
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../Styles/register.css">
    </head>
 <body>
   <div class="wrapper">
     <h2>Login</h2>
-    <form action="#">
+    <form action="../Logic/login_logic.php" method="post">
      
       <div class="input-box">
-        <input type="text" placeholder="Enter your email" required>
+        <input name="email" type="text" placeholder="Enter your email" required>
       </div>
       
       <div class="input-box">
-        <input type="password" placeholder="Enter password" required>
+        <input name="password" type="password" placeholder="Enter password" required>
       </div>
      
       <div class="input-box button">
