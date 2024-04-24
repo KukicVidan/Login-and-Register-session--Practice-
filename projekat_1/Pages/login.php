@@ -23,10 +23,10 @@
         <input type="Submit" value="Login">
       </div>
       <div class="text">
-        <h3>Dont have account? <a href="register.php">register now</a></h3>
+        <h3>Dont have account? <a href="../Pages/register.php">register now</a></h3>
       </div>
       <div class="text">
-        <h3><a href="index.php">Back to homepage</a></h3>
+        <h3><a href="../Pages/index.php">Back to homepage</a></h3>
       </div>
     </form>
   </div>
