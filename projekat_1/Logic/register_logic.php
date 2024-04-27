@@ -2,12 +2,8 @@
 <?php 
 require_once "../Pages/register.php";
 
-
- $conn = new mysqli("localhost", "root", "", "registration_form");
-
- if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// Include the database connection file
+require_once "db_connection.php";
 
 $username = mysqli_real_escape_string($conn, $_POST["username"]);
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
@@ -39,16 +35,22 @@ if($result->num_rows > 0){
   die("Email is taken");
 }
 
+// Generate verification code
+$verificationCode = bin2hex(random_bytes(16));
+
 // Hash the password
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 // Insert the user into the database
-$stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-$stmt->bind_param("sss",$username,$email,$passwordHash);
+$stmt = $conn->prepare("INSERT INTO users (username, email, password, verification_code) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss",$username,$email,$passwordHash,$verificationCode);
 
 if($stmt->execute()){
   // Get the user_id of the inserted user
   $user_id = $stmt->insert_id;
+
+  require_once "send_verification_email.php";
+
 
   session_start();
   $_SESSION['user_id'] = $user_id;

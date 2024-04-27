@@ -1,12 +1,9 @@
 <?php 
 require_once "../Pages/login.php";
 
-
- $conn = new mysqli("localhost", "root", "", "registration_form");
-
- if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// Include the database connection file
+require_once "db_connection.php";
+ 
 $email = mysqli_real_escape_string($conn, $_POST["email"]);
 $password = $_POST["password"];
 
